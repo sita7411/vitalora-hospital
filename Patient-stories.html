@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitalora Hospital</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS (for sliders/carousels) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- AOS CSS (Animate On Scroll library for animations) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (another lightweight icon set) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Project-specific CSS files -->
+    <link href="Patient-stories.css" rel="stylesheet" />
+    <link href="Patient-stories-responsive.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ================================
+       Top Info Bar 
+  ================================== -->
+    <section class="top-bar">
+      <div
+        class="container d-flex justify-content-between align-items-center flex-wrap"
+      >
+        <div>
+          <a href="mailto:info@vitalorahospital.com">
+            <i class="fa-solid fa-envelope"></i> info@vitalorahospital.com
+          </a>
+          <a href="tel:+919904405222">
+            <i class="fa-solid fa-phone"></i> +91 99044 05222
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India
+          </a>
+          <a href="#">
+            <i class="fa-regular fa-clock"></i> Mon - Sat: 8:00 AM - 10:00 PM
+          </a>
+        </div>
+        <div>
+          <span style="font-weight: 600">Follow Us On :</span>
+          <a href="https://www.facebook.com"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instragram.com"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+   Navbar 
+================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            alt="Vitalora Hospital Logo"
+            src="Assets/Home-img/logo.png"
+            class="hospital-logo"
+          />
+        </a>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Facilities.html">Our Facilities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Helth-Packeges.html">Health Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Patient-stories.html"
+                >Patient Stories</a
+              >
+            </li>
+          </ul>
+          <!-- Appointment Button (Modal Trigger) -->
+          <a
+            href="Book-appointment.html"
+            class="btn btn-inquire"
+          >
+            Book Appointment
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================================
+   Navbar mobile
+================================== -->
+    <!-- Mobile Navbar -->
+    <nav class="mobile-navbar sticky-top">
+      <div class="nav-header">
+        <img src="Assets/Home-img/logo.png" alt="Logo" />
+        <span class="menu-icon" id="menuIcon">&#9776;</span>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="About-us.html">About Us</a>
+        <a href="Facilities.html">Our Facilities</a>
+        <a href="Doctors.html">Doctors</a>
+        <a href="Blog.html">Blog</a>
+        <a href="Helth-Packeges.html">Health Packages</a>
+        <a href="Patient-stories.html" class="active">Patient Stories</a>
+        <!-- Book Appointment Button -->
+        <a href="Book-Appointment.html" class="book-btn">Book Appointment</a>
+      </div>
+    </nav>
+
+    <!-- ================================
+     hero - section
+================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div
+            class="col-md-6 mb-4 mb-md-0 d-flex flex-column align-items-center justify-content-center text-center"
+            data-aos="fade-right"
+          >
+            <h1 class="hero-title">
+              <span> Patient Stories : </span>Real Journeys of Hope & Healing
+            </h1>
+            <p class="hero-text" data-aos="fade-up" data-aos-delay="200">
+              Discover inspiring recovery journeys, heartfelt testimonials, and
+              real-life experiences from patients at Vitalora Hospital. Their
+              courage and strength continue to inspire us every day.
+            </p>
+            <a
+              href="Book-appointment.html"
+              class="btn btn-hero"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              Share Your Story
+            </a>
+          </div>
+
+          <!-- Right Side Only Image -->
+          <div class="col-md-6 text-center" data-aos="fade-left">
+            <img
+              src="Assets/patient-stories-img/hero-img.png"
+              alt="Hero Image"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+  overview - section
+================================== -->
+    <section class="container py-5 overview-section">
+      <div class="row align-items-center g-4">
+        <!-- Left Image Section -->
+        <div class="col-lg-6 text-center" data-aos="fade-right">
+          <div class="image-wrapper position-relative">
+            <img
+              src="Assets/patient-stories-img/overview-img1.png"
+              alt="Happy Patient"
+              class="main-img img-fluid"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            />
+            <img
+              src="Assets/patient-stories-img/overview-img2.png"
+              alt="Recovery Journey"
+              class="overlay-img img-fluid"
+              data-aos="zoom-in-up"
+              data-aos-delay="200"
+            />
+            <div class="circle-badge" data-aos="fade-up" data-aos-delay="300">
+              <span style="color: #fff">1,200+</span>
+              Success <br />
+              Stories
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">
+            Stories of <span>Care, Stories of Hope</span>
+          </h2>
+          <p class="text-muted" data-aos="fade-up" data-aos-delay="200">
+            Every patient we serve is a story of courage and recovery. From
+            life-saving treatments to compassionate care, our patients share
+            their heartfelt journeys that inspire others to believe in healing
+            and hope.
+          </p>
+
+          <!-- Auto-wrap 2 Column Grid Points -->
+          <ul class="points-grid list-unstyled mt-3">
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-plus-circle"></i> Inspiring recovery journeys
+            </li>
+            <li data-aos="fade-up" data-aos-delay="150">
+              <i class="bi bi-plus-circle"></i> Personal experiences of hope
+            </li>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-plus-circle"></i> Stories from diverse treatments
+            </li>
+            <li data-aos="fade-up" data-aos-delay="250">
+              <i class="bi bi-plus-circle"></i> Support that goes beyond
+              medicine
+            </li>
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-plus-circle"></i> Encouraging patient communities
+            </li>
+            <li data-aos="fade-up" data-aos-delay="350">
+              <i class="bi bi-plus-circle"></i> Compassionate medical guidance
+            </li>
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-plus-circle"></i> Building trust through care
+            </li>
+            <li data-aos="fade-up" data-aos-delay="450">
+              <i class="bi bi-plus-circle"></i> Transforming lives with healing
+            </li>
+          </ul>
+
+          <a
+            href="Patient-stories.html"
+            class="btn-overview"
+            data-aos="zoom-in"
+            data-aos-delay="500"
+          >
+            Read More Stories
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+  patieant Journey Timeline
+================================== -->
+    <div class="container py-5">
+      <!-- Patient Journey Timeline Section -->
+      <section class="pj-bg-wrapper py-5">
+        <h2 data-aos="fade-up"><span>Our </span>Patient Journey Timeline</h2>
+
+        <section class="pj-main-wrapper">
+          <!-- Timeline Item 1: Diagnosis -->
+          <div
+            class="pj-content-block"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <div
+              class="pj-circle-icon pj-icon-left"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="pj-inner-circle">
+                <img
+                  style="margin-left: 9px"
+                  alt="Diagnosis Icon"
+                  src="Assets/patient-stories-img/pj-icon1.png"
+                />
+              </div>
+            </div>
+            <div class="pj-text-box pj-text-left">
+              <h4>Initial Check – Diagnosis</h4>
+              <p>
+                Patient undergoes comprehensive tests and assessments, receiving
+                a clear diagnosis and personalized guidance for the next steps
+                in their healthcare journey.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Treatment -->
+          <div
+            class="pj-content-block"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <div
+              class="pj-circle-icon pj-icon-right"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="pj-inner-circle">
+                <img
+                  alt="Treatment Icon"
+                  src="Assets/patient-stories-img/pj-icon2.png"
+                />
+              </div>
+            </div>
+            <div class="pj-text-box pj-text-right">
+              <h4>Medical Intervention – Treatment</h4>
+              <p>
+                Patient begins a structured treatment plan, including
+                medications, therapy sessions, or procedures, closely guided by
+                their medical team to ensure safe and effective care.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Recovery -->
+          <div
+            class="pj-content-block"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
+            <div
+              class="pj-circle-icon pj-icon-left"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div class="pj-inner-circle">
+                <img
+                  alt="Recovery Icon"
+                  src="Assets/patient-stories-img/pj-icon3.png"
+                />
+              </div>
+            </div>
+            <div class="pj-text-box pj-text-left">
+              <h4>Healing Process – Recovery</h4>
+              <p>
+                Patient advances through recovery, regaining strength and
+                wellness while being closely monitored to ensure optimal health
+                outcomes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Follow-up -->
+          <div
+            class="pj-content-block"
+            data-aos="fade-left"
+            data-aos-delay="400"
+          >
+            <div
+              class="pj-circle-icon pj-icon-right"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+            >
+              <div class="pj-inner-circle">
+                <img
+                  alt="Follow-up Icon"
+                  src="Assets/patient-stories-img/pj-icon4.png"
+                />
+              </div>
+            </div>
+            <div class="pj-text-box pj-text-right">
+              <h4>Ongoing Care – Follow-up</h4>
+              <p>
+                Patient continues with regular follow-ups and monitoring,
+                ensuring sustained wellness and early prevention of any
+                recurrence.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <!-- ================================
+  Patient Stories – Before & After
+================================== -->
+    <section class="cards-section">
+      <div class="container">
+        <h2 data-aos="fade-up">
+          <span>Patient Stories – </span>Before & After
+        </h2>
+        <div class="grid-cards">
+          <!-- Card 1 -->
+          <div
+            class="flip-card tile--wide"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flip-inner">
+              <div
+                class="flip-front"
+                style="
+                  background-image: url('Assets/patient-stories-img/surgery-before-img.jpg');
+                "
+              >
+                <div>
+                  <div class="kicker">GENERAL SURGERY</div>
+                  <h3 class="title mb-3">Before: Appendicitis Emergency</h3>
+                  <button class="btn-pill flip-btn" data-action="flip">
+                    See After
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flip-back"
+                style="
+                  background-image: url('Assets/patient-stories-img/surgery-after-img.jpg');
+                "
+              >
+                <div>
+                  <h3 class="title">After: Quick Recovery</h3>
+                  <p class="mb-3">
+                    Patient discharged within 3 days after successful surgery.
+                  </p>
+                  <button class="btn-pill flip-btn" data-action="unflip">
+                    See Before
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flip-inner">
+              <div
+                class="flip-front"
+                style="
+                  background-image: url('Assets/patient-stories-img/ORTHOPEDICS-before-img.jpg');
+                "
+              >
+                <div>
+                  <div class="kicker">ORTHOPEDICS</div>
+                  <h3 class="title">Before: Hip Fracture</h3>
+                  <button class="btn-pill flip-btn" data-action="flip">
+                    See After
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flip-back"
+                style="
+                  background-image: url('Assets/patient-stories-img/ORTHOPEDICS-after-img.jpg');
+                "
+              >
+                <div>
+                  <h3 class="title">After: Walking Independently</h3>
+                  <p class="mb-3">
+                    Successful hip replacement surgery restored mobility.
+                  </p>
+                  <button class="btn-pill flip-btn" data-action="unflip">
+                    See Before
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="flip-inner">
+              <div
+                class="flip-front"
+                style="
+                  background-image: url('Assets/patient-stories-img/CARDIOLOGY-BEFORE-IMG.jpg');
+                "
+              >
+                <div>
+                  <div class="kicker">CARDIOLOGY</div>
+                  <h3 class="title">Before: Severe Heart Blockage</h3>
+                  <button class="btn-pill flip-btn" data-action="flip">
+                    See After
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flip-back"
+                style="
+                  background-image: url('Assets/patient-stories-img/CARDIOLOGY-AFTER-IMG.jpg');
+                "
+              >
+                <div>
+                  <h3 class="title">After: Successful Bypass</h3>
+                  <p class="mb-3">
+                    Patient regained normal lifestyle post treatment.
+                  </p>
+                  <button class="btn-pill flip-btn" data-action="unflip">
+                    See Before
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-inner">
+              <div
+                class="flip-front"
+                style="
+                  background-image: url('Assets/patient-stories-img/NEUROLOGY-before-img.jpg');
+                "
+              >
+                <div>
+                  <div class="kicker">NEUROLOGY</div>
+                  <h3 class="title">Before: Stroke Symptoms</h3>
+                  <button class="btn-pill flip-btn" data-action="flip">
+                    See After
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flip-back"
+                style="
+                  background-image: url('Assets/patient-stories-img/NEUROLOGY-after-img.jpg');
+                "
+              >
+                <div>
+                  <h3 class="title">After: Regained Speech & Strength</h3>
+                  <p class="mb-3">
+                    Timely treatment helped full recovery after stroke.
+                  </p>
+                  <button class="btn-pill flip-btn" data-action="unflip">
+                    See Before
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="flip-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="flip-inner">
+              <div
+                class="flip-front"
+                style="
+                  background-image: url('Assets/patient-stories-img/PEDIATRICS-before-img.jpg');
+                "
+              >
+                <div>
+                  <div class="kicker">PEDIATRICS</div>
+                  <h3 class="title">Before: Severe Asthma Attack</h3>
+                  <button class="btn-pill flip-btn" data-action="flip">
+                    See After
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flip-back"
+                style="
+                  background-image: url('Assets/patient-stories-img/PEDIATRICS-after-img.jpg');
+                "
+              >
+                <div>
+                  <h5 class="kicker">After: Breathing Freely</h5>
+                  <p class="mb-3">
+                    Child returned to school after proper treatment & care.
+                  </p>
+                  <button class="btn-pill flip-btn" data-action="unflip">
+                    See Before
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+global patient stories - section
+================================== -->
+    <section class="world-section container">
+      <div class="row align-items-center">
+        <!-- Left Side -->
+        <div class="col-lg-6 col-md-12" data-aos="fade-right">
+          <h2><span>Our Patients</span> Are Across the World</h2>
+          <p class="world-subtitle">
+            Inspiring journeys of recovery, world-class care, and stories of
+            hope shared by patients across every continent of the globe.
+          </p>
+
+          <div class="row g-3">
+            <!-- Column 1 -->
+            <div class="col-md-6 d-flex flex-column">
+              <div
+                class="info-card flex-grow-1"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div class="info-icon">
+                  <img
+                    alt="Heart"
+                    src="Assets/patient-stories-img/global-stories-icon1.png"
+                  />
+                </div>
+                <div class="info-text">10,000+ patients treated worldwide.</div>
+              </div>
+              <div
+                class="info-card flex-grow-1"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div class="info-icon">
+                  <img
+                    alt="Globe"
+                    src="Assets/patient-stories-img/global-stories-icon2.png"
+                  />
+                </div>
+                <div class="info-text">
+                  Support for patients in every region.
+                </div>
+              </div>
+              <div
+                class="info-card flex-grow-1"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <div class="info-icon">
+                  <img
+                    alt="Chat"
+                    src="Assets/patient-stories-img/global-stories-icon3.png"
+                  />
+                </div>
+                <div class="info-text">Personalized care and follow-ups.</div>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-6 d-flex flex-column">
+              <div
+                class="info-card flex-grow-1"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+              >
+                <div class="info-icon">
+                  <img
+                    alt="Hospital"
+                    src="Assets/patient-stories-img/global-stories-icon4.png"
+                  />
+                </div>
+                <div class="info-text">
+                  Advanced medical facilities worldwide.
+                </div>
+              </div>
+              <div
+                class="info-card flex-grow-1"
+                data-aos="zoom-in"
+                data-aos-delay="500"
+              >
+                <div class="info-icon">
+                  <img
+                    alt="Doctor"
+                    src="Assets/patient-stories-img/global-stories-icon5.png"
+                  />
+                </div>
+                <div class="info-text">
+                  Expert doctors and nurses at service.
+                </div>
+              </div>
+              <div
+                class="info-card flex-grow-1"
+                data-aos="zoom-in"
+                data-aos-delay="600"
+              >
+                <div class="info-icon">
+                  <img
+                    alt="Travel"
+                    src="Assets/patient-stories-img/global-stories-icon6.png"
+                  />
+                </div>
+                <div class="info-text">
+                  Travel and stay support for patients.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Map -->
+        <div class="col-lg-6 col-md-12 mt-4 mt-lg-0" data-aos="fade-left">
+          <div class="map-container">
+            <img
+              alt="World Map"
+              src="Assets/patient-stories-img/right-img.png"
+              class="map"
+            />
+
+            <!-- Markers with images + tooltip -->
+            <div
+              class="marker marker-1"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              data-bs-toggle="tooltip"
+              title="Europe"
+            >
+              <img
+                alt="Europe"
+                src="Assets/patient-stories-img/european-union.png"
+              />
+            </div>
+            <div
+              class="marker marker-2"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-bs-toggle="tooltip"
+              title="Africa"
+            >
+              <img
+                alt="Africa"
+                src="Assets/patient-stories-img/south-africa.png"
+              />
+            </div>
+            <div
+              class="marker marker-3"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              data-bs-toggle="tooltip"
+              title="North America"
+            >
+              <img
+                alt="North America"
+                src="Assets/patient-stories-img/united-states-of-america.png"
+              />
+            </div>
+            <div
+              class="marker marker-4"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              data-bs-toggle="tooltip"
+              title="Japan"
+            >
+              <img alt="Japan" src="Assets/patient-stories-img/japan.png" />
+            </div>
+            <div
+              class="marker marker-5"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              data-bs-toggle="tooltip"
+              title="Indonesia"
+            >
+              <img
+                alt="Indonesia"
+                src="Assets/patient-stories-img/indonesia.png"
+              />
+            </div>
+            <div
+              class="marker marker-6"
+              data-aos="zoom-in"
+              data-aos-delay="700"
+              data-bs-toggle="tooltip"
+              title="Australia"
+            >
+              <img
+                alt="Australia"
+                src="Assets/patient-stories-img/australia.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+  FOOTER
+================================== -->
+    <!-- Newsletter -->
+    <section class="newsletter" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-md-8 d-flex justify-content-md-end text-md-end gap-4">
+            <div class="nl-icon ms-3">
+              <i class="bi bi-send"></i>
+            </div>
+            <div class="me-3">
+              <h3 class="">Subscribe Our Newsletter</h3>
+              <p class="">Stay in touch with us to get latest news</p>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="col-md-4 text-md-end text-center mb-3 mb-md-0">
+            <button class="btn-subscribe">SUBSCRIBE NOW</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-3">
+          <!-- Column 1: Opening Hours -->
+          <div class="col-md-4" data-aos="fade-right">
+            <div class="hours-box p-4">
+              <h5>Opening Hours</h5>
+              <p class="desc">
+                We are open to provide quality healthcare every day.
+              </p>
+              <p>
+                <b>Mon-Fri :</b> <span class="time">8:00 AM – 10:00 PM</span>
+              </p>
+              <hr />
+              <p>
+                <b>Sat-Sun :</b> <span class="time">7:00 AM – 9:00 PM</span>
+              </p>
+              <hr />
+              <p><a href="#" class="emergency">24*7 Emergency Care Open</a></p>
+              <hr />
+              <p class="follow">Follow us on social media :</p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="https://twitter.com/" target="_blank"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="https://wa.me/1234567890" target="_blank"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2-4: Other Info inside col-md-8 -->
+          <div class="col-md-8">
+            <div
+              class="row g-3 justify-content-center text-center text-md-start"
+            >
+              <!-- Logo + About -->
+              <div class="col-md-4 footer-separator" data-aos="zoom-in">
+                <div class="footer-logo">
+                  <a href="index.html">
+                    <img
+                      src="Assets/Home-img/Footer-logo.png"
+                      alt="Medzoon Logo"
+                      style="
+                        height: 87px;
+                        margin-left: -81px;
+                        margin-top: -20px;
+                      "
+                    />
+                  </a>
+                </div>
+                <p>
+                  At Vitalora Hospital, we provide compassionate and world-class
+                  healthcare, ensuring every patient receives personalized
+                  attention and advanced medical care.
+                </p>
+              </div>
+
+              <!-- Quick Links -->
+              <div
+                class="col-md-4 footer-separator"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                  <li><a href="index.html">+ Home</a></li>
+                  <li><a href="About-us.html">+ About Us</a></li>
+                  <li><a href="Facilities.html">+ Our Facilities</a></li>
+                  <li><a href="Doctors.html">+ Doctors</a></li>
+                  <li><a href="Blog.html">+ Blog</a></li>
+                  <li><a href="Helth-Packeges.html">+ Health Packages</a></li>
+                  <li><a href="Patient-stories.html">+ Patient Stories</a></li>
+                  <li><a href="Book-appointment.html">+ Contact Us</a></li>
+                </ul>
+              </div>
+
+              <!-- Contact Info -->
+              <div
+                class="col-md-4 footer-separator"
+                data-aos="fade-left"
+                data-aos-delay="400"
+              >
+                <h5>Contact Information</h5>
+                <p>
+                  <i class="bi bi-geo-alt"></i> Location : 24th North Road,
+                  Texas
+                </p>
+                <p><i class="bi bi-envelope"></i> Mail : xyz@example.com</p>
+                <p><i class="bi bi-telephone"></i> Phone : +1500-546-7789</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider image above footer-bottom -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="footer-bottom d-flex flex-wrap justify-content-between align-items-center mt-3"
+        >
+          <div>© 2018 – 2024 Vitalora Hospital | All Rights Reserved</div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================================
+  java script
+================================== -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- mobile menu js -->
+    <script>
+      const menuIcon = document.getElementById("menuIcon");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuIcon.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show"); // toggle menu
+
+        // Toggle icon
+        if (menuIcon.textContent === "\u2630") {
+          // hamburger
+          menuIcon.textContent = "\u00D7"; // close ×
+        } else {
+          menuIcon.textContent = "\u2630"; // hamburger ☰
+        }
+      });
+    </script>
+
+    <!--  Select all flip buttons -->
+    <script>
+      const flipButtons = document.querySelectorAll(".flip-btn");
+
+      flipButtons.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          const flipCard = btn.closest(".flip-card");
+
+          if (btn.dataset.action === "flip") {
+            flipCard.classList.add("flipped");
+          } else if (btn.dataset.action === "unflip") {
+            flipCard.classList.remove("flipped");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      // Enable tooltips
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (el) => new bootstrap.Tooltip(el)
+      );
+    </script>
+
+    <!-- AOS js -->
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration
+        once: true, // only animate once
+        easing: "ease-in-out",
+      });
+    </script>
+  </body>
+</html>

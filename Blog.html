@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitalora Hospital</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel CSS (for sliders/carousels) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- AOS CSS (Animate On Scroll library for animations) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (another lightweight icon set) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Project-specific CSS files -->
+    <link href="Blog.css" rel="stylesheet" />
+    <link href="Blog-responsive.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ================================
+       Top Info Bar 
+  ================================== -->
+    <section class="top-bar">
+      <div
+        class="container d-flex justify-content-between align-items-center flex-wrap"
+      >
+        <div>
+          <a href="mailto:info@vitalorahospital.com">
+            <i class="fa-solid fa-envelope"></i> info@vitalorahospital.com
+          </a>
+          <a href="tel:+919904405222">
+            <i class="fa-solid fa-phone"></i> +91 99044 05222
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-location-dot"></i> Surat, Gujarat, India
+          </a>
+          <a href="#">
+            <i class="fa-regular fa-clock"></i> Mon - Sat: 8:00 AM - 10:00 PM
+          </a>
+        </div>
+        <div>
+          <span style="font-weight: 600">Follow Us On :</span>
+          <a href="https://www.facebook.com"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instragram.com"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+   Navbar 
+================================== -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            alt="Vitalora Hospital Logo"
+            src="Assets/Home-img/logo.png"
+            class="hospital-logo"
+          />
+        </a>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Facilities.html">Our Facilities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Doctors.html">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Helth-Packeges.html">Health Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Patient-stories.html"
+                >Patient Stories</a
+              >
+            </li>
+          </ul>
+          <!-- Appointment Button (Modal Trigger) -->
+          <a
+            href="Book-appointment.html"
+            class="btn btn-inquire"
+          >
+            Book Appointment
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================================
+   Navbar mobile
+================================== -->
+    <!-- Mobile Navbar -->
+    <nav class="mobile-navbar sticky-top">
+      <div class="nav-header">
+        <img src="Assets/Home-img/logo.png" alt="Logo" />
+        <span class="menu-icon" id="menuIcon">&#9776;</span>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="About-us.html">About Us</a>
+        <a href="Facilities.html">Our Facilities</a>
+        <a href="Doctors.html">Doctors</a>
+        <a href="Blog.html" class="active">Blog</a>
+        <a href="Helth-Packeges.html">Health Packages</a>
+        <a href="Patient-stories.html">Patient Stories</a>
+        <!-- Book Appointment Button -->
+        <a href="Book-Appointment.html" class="book-btn">Book Appointment</a>
+      </div>
+    </nav>
+
+    <!-- ================================
+     hero - section (Blog Page)
+================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div
+            class="col-md-6 mb-4 mb-md-0 d-flex flex-column align-items-center justify-content-center text-center"
+            data-aos="fade-right"
+          >
+            <h1 class="hero-title">
+              <span> Hospital Blog : </span>Insights & Stories from Our Experts
+            </h1>
+            <p class="hero-text" data-aos="fade-up" data-aos-delay="200">
+              Explore the latest health tips, medical breakthroughs, and
+              inspiring patient stories from Vitalora Hospital. Stay informed
+              and empowered to take care of your health.
+            </p>
+            <a
+              href="Blog.html"
+              class="btn btn-hero"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              Read Our Blog
+            </a>
+          </div>
+
+          <!-- Right Side Only Image -->
+          <div class="col-md-6 text-center" data-aos="fade-left">
+            <img
+              src="Assets/Blog-img/hero-img.png"
+              alt="Blog Hero Image"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+       Blog - section
+  ================================== -->
+    <section class="container py-4 blog-section">
+      <!-- ===== Top Heading ===== -->
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 data-aos="fade-down"><span>Welcome to</span> Our Hospital Blog</h2>
+        <p class="text-muted" data-aos="fade-right">
+          Explore healthcare tips, wellness advice, and updates from our
+          dedicated team of professionals.
+        </p>
+      </div>
+
+      <!-- ===== Featured Section ===== -->
+      <div class="row featured">
+        <div class="col-md-6 big-post" data-aos="zoom-in" data-aos-delay="100">
+          <img
+            alt="hospital-structure"
+            src="Assets/Blog-img/Blog-img-big.png"
+          />
+          <div class="content">
+            <small>Healthcare</small>
+            <h4>The Future of Modern Hospital Care and Patient Experience</h4>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="small-post" data-aos="fade-left" data-aos-delay="200">
+            <img alt="wellness" src="Assets/Blog-img/blog-small-1.png" />
+            <div class="content">
+              <small>Wellness</small>
+              <h5>10 Daily Habits for a Healthier Lifestyle</h5>
+            </div>
+          </div>
+          <div class="small-post" data-aos="fade-left" data-aos-delay="300">
+            <img
+              alt="hospital emergency"
+              src="Assets/Blog-img/blog-small-2.png"
+            />
+            <div class="content">
+              <small>Emergency</small>
+              <h5>How Emergency Care is Evolving with Technology</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Gradient Separator Line ===== -->
+      <div class="gradient-line my-4" data-aos="fade-up"></div>
+
+      <!-- ===== Post Grid + Sidebar ===== -->
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <!-- Post 1 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="post-card">
+                <img alt="HospitalStaff" src="Assets/Blog-img/blog-post1.png" />
+                <div class="post-content">
+                  <div class="post-meta">
+                    <i class="bi bi-calendar-event"></i> July 18, 2023 &nbsp; |
+                    &nbsp; <i class="bi bi-person-circle"></i> Admin
+                  </div>
+
+                  <h5 class="post-title">
+                    Meet the Dedicated Heroes of Our Hospital Staff
+                  </h5>
+                  <p class="post-desc">
+                    Our doctors and nurses go above and beyond every day to
+                    provide world-class care.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Post 2 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="post-card">
+                <img alt="Patient Care" src="Assets/Blog-img/blog-post2.png" />
+                <div class="post-content">
+                  <div class="post-meta">
+                    <i class="bi bi-calendar-event"></i> July 18, 2023 &nbsp; |
+                    &nbsp; <i class="bi bi-person-circle"></i> Admin
+                  </div>
+                  <h5 class="post-title">
+                    Improving Patient Care with Advanced Facilities
+                  </h5>
+                  <p class="post-desc">
+                    Discover how our modern facilities are designed for comfort
+                    and efficiency.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Post 3 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="post-card">
+                <img alt="Yoga" src="Assets/Blog-img/blog-post3.png" />
+                <div class="post-content">
+                  <div class="post-meta">
+                    <i class="bi bi-calendar-event"></i> July 18, 2023 &nbsp; |
+                    &nbsp; <i class="bi bi-person-circle"></i> Admin
+                  </div>
+                  <h5 class="post-title">
+                    5 Simple Health Tips for Everyday Wellness
+                  </h5>
+                  <p class="post-desc">
+                    Boost your immune system and stay active with these
+                    easy-to-follow tips.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Post 4 -->
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="post-card">
+                <img
+                  alt="Medical Research"
+                  src="Assets/Blog-img/blog-post4.png"
+                />
+                <div class="post-content">
+                  <div class="post-meta">
+                    <i class="bi bi-calendar-event"></i> July 18, 2023 &nbsp; |
+                    &nbsp; <i class="bi bi-person-circle"></i> Admin
+                  </div>
+                  <h5 class="post-title">
+                    How Medical Research is Changing the Future
+                  </h5>
+                  <p class="post-desc">
+                    Innovative research projects are paving the way for better
+                    treatments and cures.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Sidebar ===== -->
+        <div class="col-lg-4 sidebar" data-aos="fade-left">
+          <!-- Latest Post -->
+          <div class="section-heading">
+            <h5>Latest Post</h5>
+            <span class="line"></span>
+          </div>
+          <div class="latest-post mb-3">
+            <img alt="COVID-19" src="Assets/Blog-img/sidebar-img1.jpg" />
+            <div>
+              <p class="mb-1 fw-semibold">
+                COVID-19 Updates: Safety Measures for Patients
+              </p>
+              <small>July 15, 2023 | No Comments</small>
+            </div>
+          </div>
+          <div class="latest-post mb-3">
+            <img alt="robotic surgery" src="Assets/Blog-img/sidebar-img2.jpg" />
+            <div>
+              <p class="mb-1 fw-semibold">
+                Advancements in Robotic Surgery at Our Hospital
+              </p>
+              <small>July 12, 2023 | No Comments</small>
+            </div>
+          </div>
+          <div class="latest-post mb-3">
+            <img alt="counseling" src="Assets/Blog-img/sidebar-img3.jpg" />
+            <div>
+              <p class="mb-1 fw-semibold">
+                The Importance of Mental Health Support
+              </p>
+              <small>July 10, 2023 | No Comments</small>
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="section-heading mt-4">
+            <h5>Categories</h5>
+            <span class="line"></span>
+          </div>
+          <ul class="categories p-0">
+            <li><i class="bi bi-plus"></i> Patient Care</li>
+            <li><i class="bi bi-plus"></i> Doctors & Specialists</li>
+            <li><i class="bi bi-plus"></i> Medical Services</li>
+            <li><i class="bi bi-plus"></i> Health & Wellness</li>
+          </ul>
+
+          <!-- Gallery -->
+          <div class="section-heading mt-4">
+            <h5>Our Gallery</h5>
+            <span class="line"></span>
+          </div>
+          <div class="row g-3 mt-2">
+            <div class="col-md-4 col-sm-6">
+              <img
+                alt="Doctors in Hospital"
+                src="Assets/Blog-img/sidebar-gallary-img1.jpg"
+                class="gallery-img shadow-sm"
+              />
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <img
+                alt="Patient Care"
+                src="Assets/Blog-img/blog-post2.png"
+                class="gallery-img shadow-sm"
+              />
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <img
+                alt="Medical Equipment"
+                src="Assets/Blog-img/sidebar-gallary-img2.jpg"
+                class="gallery-img shadow-sm"
+              />
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <img
+                alt="Nurse in Hospital"
+                src="Assets/Blog-img/sidebar-gallary-img3.jpg"
+                class="gallery-img shadow-sm"
+              />
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <img
+                alt="Healthcare Clinic"
+                src="Assets/Blog-img/sidebar-gallary-img4.jpg"
+                class="gallery-img shadow-sm"
+              />
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <img
+                alt="Operation Theatre"
+                src="Assets/Blog-img/sidebar-gallary-img5.jpg"
+                class="gallery-img shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== CTA Banner ===== -->
+      <div class="cta-banner mt-5" data-aos="zoom-in">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://via.placeholder.com/1200x300?text=Hospital+Care+Poster"
+        >
+          <source
+            src="Assets/Doctors/7584629-uhd_4096_2160_25fps.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="content">
+          <h3>Trusted Care for a Healthy Future</h3>
+          <p>
+            Book your appointment today and experience world-class healthcare.
+          </p>
+          <button
+            class="btn-cta"
+            onclick="window.location.href='Book-appointment.html'"
+          >
+            Book Appointment
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================
+  FOOTER
+================================== -->
+    <!-- Newsletter -->
+    <section class="newsletter" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-md-8 d-flex justify-content-md-end text-md-end gap-4">
+            <div class="nl-icon ms-3">
+              <i class="bi bi-send"></i>
+            </div>
+            <div class="me-3">
+              <h3 class="">Subscribe Our Newsletter</h3>
+              <p class="">Stay in touch with us to get latest news</p>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="col-md-4 text-md-end text-center mb-3 mb-md-0">
+            <button class="btn-subscribe">SUBSCRIBE NOW</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-3">
+          <!-- Column 1: Opening Hours -->
+          <div class="col-md-4" data-aos="fade-right">
+            <div class="hours-box p-4">
+              <h5>Opening Hours</h5>
+              <p class="desc">
+                We are open to provide quality healthcare every day.
+              </p>
+              <p>
+                <b>Mon-Fri :</b> <span class="time">8:00 AM – 10:00 PM</span>
+              </p>
+              <hr />
+              <p>
+                <b>Sat-Sun :</b> <span class="time">7:00 AM – 9:00 PM</span>
+              </p>
+              <hr />
+              <p><a href="#" class="emergency">24*7 Emergency Care Open</a></p>
+              <hr />
+              <p class="follow">Follow us on social media :</p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="https://twitter.com/" target="_blank"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="https://wa.me/1234567890" target="_blank"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2-4: Other Info inside col-md-8 -->
+          <div class="col-md-8">
+            <div
+              class="row g-3 justify-content-center text-center text-md-start"
+            >
+              <!-- Logo + About -->
+              <div class="col-md-4 footer-separator" data-aos="zoom-in">
+                <div class="footer-logo">
+                  <a href="index.html">
+                    <img
+                      src="Assets/Home-img/Footer-logo.png"
+                      alt="Medzoon Logo"
+                      style="
+                        height: 87px;
+                        margin-left: -81px;
+                        margin-top: -20px;
+                      "
+                    />
+                  </a>
+                </div>
+                <p>
+                  At Vitalora Hospital, we provide compassionate and world-class
+                  healthcare, ensuring every patient receives personalized
+                  attention and advanced medical care.
+                </p>
+              </div>
+
+              <!-- Quick Links -->
+              <div
+                class="col-md-4 footer-separator"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                  <li><a href="index.html">+ Home</a></li>
+                  <li><a href="About-us.html">+ About Us</a></li>
+                  <li><a href="Facilities.html">+ Our Facilities</a></li>
+                  <li><a href="Doctors.html">+ Doctors</a></li>
+                  <li><a href="Blog.html">+ Blog</a></li>
+                  <li><a href="Helth-Packeges.html">+ Health Packages</a></li>
+                  <li><a href="Patient-stories.html">+ Patient Stories</a></li>
+                  <li><a href="Book-appointment.html">+ Contact Us</a></li>
+                </ul>
+              </div>
+
+              <!-- Contact Info -->
+              <div
+                class="col-md-4 footer-separator"
+                data-aos="fade-left"
+                data-aos-delay="400"
+              >
+                <h5>Contact Information</h5>
+                <p>
+                  <i class="bi bi-geo-alt"></i> Location : 24th North Road,
+                  Texas
+                </p>
+                <p><i class="bi bi-envelope"></i> Mail : xyz@example.com</p>
+                <p><i class="bi bi-telephone"></i> Phone : +1500-546-7789</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider image above footer-bottom -->
+        <div class="footer-divider"></div>
+
+        <!-- Footer Bottom -->
+        <div
+          class="footer-bottom d-flex flex-wrap justify-content-between align-items-center mt-3"
+        >
+          <div>© 2018 – 2024 Vitalora Hospital | All Rights Reserved</div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ================================
+  java script
+================================== -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- mobile menu js -->
+    <script>
+      const menuIcon = document.getElementById("menuIcon");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuIcon.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show"); // toggle menu
+
+        // Toggle icon
+        if (menuIcon.textContent === "\u2630") {
+          // hamburger
+          menuIcon.textContent = "\u00D7"; // close ×
+        } else {
+          menuIcon.textContent = "\u2630"; // hamburger ☰
+        }
+      });
+    </script>
+
+    <!-- AOS js -->
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration
+        once: true, // only animate once
+        easing: "ease-in-out",
+      });
+    </script>
+  </body>
+</html>
