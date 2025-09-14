@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hospital Website Documentation</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        background: #f8fafc;
+        color: #1e293b;
+        font-size: 0.95rem;
+      }
+
+      /* Header */
+      header {
+        background: linear-gradient(135deg, #219b86, #047857);
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px 100px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        opacity: 0.5;
+      }
+      header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+      header p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        max-width: 800px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      /* Navigation */
+      nav.sticky-top {
+        z-index: 9999;
+        background: #fff;
+        transition: all 0.3s ease;
+      }
+      nav .nav-link {
+        font-weight: 500;
+        color: #219b86;
+        padding: 12px 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+      }
+      nav .nav-link:hover,
+      nav .nav-link.active {
+        color: #fff;
+        background: #219b86;
+        transform: scale(1.05);
+      }
+
+      /* Section Cards */
+      .section-card {
+        background: #fff;
+        padding: 40px;
+        margin: 50px 0;
+        border-radius: 12px;
+        border-left: 8px solid #219b86;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .section-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+      }
+      .section-card h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #219b86;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border-bottom: 3px solid #219b86;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+      }
+      .section-card h2 i {
+        color: #219b86;
+        font-size: 1.5rem;
+      }
+
+      /* Lists */
+      .section-card ul {
+        padding-left: 25px;
+        margin-top: 15px;
+      }
+      .section-card ul li {
+        margin-bottom: 12px;
+        font-size: 1rem;
+        position: relative;
+      }
+      .section-card ul li::before {
+        content: "•";
+        color: #219b86;
+        font-size: 1.3rem;
+        position: absolute;
+        left: -20px;
+      }
+
+      /* Note box */
+      .note {
+        background: #ecfdf5;
+        border-left: 6px solid #219b86;
+        padding: 20px;
+        margin: 30px 0 0;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 1rem;
+        color: #219b86;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+      .note i {
+        font-size: 1.3rem;
+      }
+
+      /* Code blocks */
+      pre {
+        background: #f1f5f9;
+        padding: 20px;
+        border-radius: 10px;
+        overflow-x: auto;
+        font-size: 0.95rem;
+        border: 1px solid #e2e8f0;
+        position: relative;
+      }
+      pre::before {
+        content: "Code";
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        background: #219b86;
+        color: #fff;
+        padding: 2px 10px;
+        border-radius: 5px;
+        font-size: 0.75rem;
+      }
+
+      /* Footer */
+      footer {
+        background: #219b86;
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 1rem;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        margin-top: 60px;
+        box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.2);
+      }
+      footer a {
+        color: #a7f3d0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        header h1 {
+          font-size: 2.7rem;
+        }
+        header p {
+          font-size: 1.05rem;
+        }
+        .section-card h2 {
+          font-size: 1.6rem;
+        }
+      }
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2.2rem;
+        }
+        header p {
+          font-size: 1rem;
+        }
+        .section-card {
+          padding: 30px;
+        }
+        .section-card h2 {
+          font-size: 1.45rem;
+        }
+      }
+      @media (max-width: 576px) {
+        nav .nav-link {
+          font-size: 0.9rem;
+          padding: 10px 15px;
+        }
+        header {
+          padding: 55px 15px 75px;
+        }
+      }
+
+      /* Animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Vitalora Hospital Website Documentation</h1>
+      <p>
+        Comprehensive Guide for Developers and Administrators Using Bootstrap,
+        HTML, and CSS
+      </p>
+    </header>
+
+    <div class="container">
+      <!-- Sticky Navigation -->
+      <nav class="sticky-top bg-white shadow-sm py-3">
+        <ul class="nav justify-content-center flex-wrap">
+          <li class="nav-item">
+            <a class="nav-link" href="#requirements">Requirements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#installation">Installation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#introduction">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#structure">File Structure</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#assets">Assets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scripts">Scripts & Plugins</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#customization">Customization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#credits">Credits</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#support">Support</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <!-- Requirements -->
+        <div id="requirements" class="section-card fade-in">
+          <h2><i class="fas fa-cogs"></i> Requirements</h2>
+          <ul>
+            <li>Code Editor: Visual Studio Code / Sublime Text</li>
+            <li>Browser: Chrome, Firefox, Edge, Safari (latest versions)</li>
+            <li>Bootstrap 5.3.2 included via CDN</li>
+            <li>Basic HTML & CSS knowledge</li>
+          </ul>
+        </div>
+
+        <!-- Installation -->
+        <div id="installation" class="section-card fade-in">
+          <h2><i class="fas fa-download"></i> Installation</h2>
+          <ol>
+            <li>Unzip the downloaded package</li>
+            <li>Open the <code>index.html</code> file in your browser</li>
+            <li>To edit, open files in your code editor</li>
+            <li>Upload all files to your web server to make it live</li>
+          </ol>
+          <div class="note">
+            <i class="fas fa-info-circle"></i> Always keep the folder structure
+            intact for smooth functioning.
+          </div>
+        </div>
+
+        <!-- Introduction -->
+        <div id="introduction" class="section-card fade-in">
+          <h2><i class="fas fa-info-circle"></i> Introduction</h2>
+          <p>
+            This template is built using
+            <strong>HTML5, CSS3, Bootstrap 5, and JavaScript</strong>.
+            JavaScript is included for interactive features such as sliders,
+            navigation effects, and animations.
+          </p>
+          <ul>
+            <li>Bootstrap 5 grid system and components for seamless layouts</li>
+            <li>Fully responsive design optimized for all devices</li>
+            <li>
+              Interactive sliders using Bootstrap Carousel or Owl Carousel
+            </li>
+            <li>Cross-browser compatibility for consistent performance</li>
+          </ul>
+        </div>
+
+        <!-- File Structure -->
+        <div id="structure" class="section-card fade-in">
+          <h2><i class="fas fa-folder-open"></i> File Structure</h2>
+          <pre><code>
+hospital-website/
+├── assets/
+│   ├── css/
+│   │   └── style.css (Main stylesheet)
+│   ├── responsive/
+│   │   └── index-responsive.css (Responsive breakpoints)
+│   ├── Assets/ (Images organized by pages)
+│   │   ├── home-img/
+│   │   ├── about-img/
+│   │   ├── facilities-img/
+│   │   ├── doctors-img/
+│   │   ├── blog-img/
+│   │   ├── health-package-img/
+│   │   ├── patient-stories-img/
+├── index.html
+├── about-us.html
+├── our-facilities.html
+├── doctors.html
+├── blog.html
+├── health-package.html
+├── patient-stories.html
+├── book-appointment.html
+          </code></pre>
+          <div class="note">
+            <i class="fas fa-exclamation-triangle"></i> Maintain the folder
+            structure to ensure proper functionality of CSS and image
+            references.
+          </div>
+        </div>
+
+        <!-- Assets -->
+        <div id="assets" class="section-card fade-in">
+          <h2><i class="fas fa-folder"></i> Assets</h2>
+          <ul>
+            <li>CSS: <code>assets/css/style.css</code> for custom styling</li>
+            <li>
+              Responsive: <code>responsive/index-responsive.css</code> for
+              screen breakpoints
+            </li>
+            <li>Images: Organized in <code>assets/Assets/</code> by page</li>
+            <li>Fonts & Icons: Font Awesome 6 via CDN for icons</li>
+          </ul>
+        </div>
+
+        <!-- Scripts & Plugins -->
+        <div id="scripts" class="section-card fade-in">
+          <h2><i class="fas fa-plug"></i> Scripts & Plugins</h2>
+          <ul>
+            <li>
+              Bootstrap 5 JS for navbar, modals, and carousel functionality
+            </li>
+            <li>Optional Owl Carousel for advanced sliders</li>
+          </ul>
+          <pre><code>
+// Example: Initialize Bootstrap Carousel
+var $comfortOwl = $(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 25,
+  autoplay: true,
+  autoplayTimeout: 5500,
+  autoplayHoverPause: true,
+  dots: false,
+  nav: false,
+  responsive: {
+    0: { items: 1 },
+    600: { items: 2 },
+    992: { items: 3 },
+    1200: { items: 4 }
+  },
+});
+
+// Custom Prev/Next controls
+$(".comfort-prev").click(function () {
+  $comfortOwl.trigger("prev.owl.carousel");
+});
+$(".comfort-next").click(function () {
+  $comfortOwl.trigger("next.owl.carousel");
+});
+          </code></pre>
+        </div>
+
+        <!-- Customization -->
+        <div id="customization" class="section-card fade-in">
+          <h2><i class="fas fa-wrench"></i> Customization</h2>
+          <ul>
+            <li>
+              <strong>Logo:</strong> Replace logo.png inside
+              <code>assets/Assets/</code>
+            </li>
+            <li>
+              <strong>Colors:</strong> Update primary colors in
+              <code>assets/css/style.css</code>
+            </li>
+            <li>
+              <strong>Fonts:</strong> Change Google Fonts link in
+              <code>&lt;head&gt;</code>
+            </li>
+            <li>
+              <strong>Sections:</strong> Copy/paste Bootstrap grid blocks to add
+              new content
+            </li>
+          </ul>
+        </div>
+
+        <!-- Credits -->
+        <div id="credits" class="section-card fade-in">
+          <h2><i class="fas fa-copyright"></i> Credits & Licensing</h2>
+          <ul>
+            <li>
+              Fonts:
+              <a href="https://fonts.google.com/specimen/Inter" target="_blank"
+                >Google Fonts – Inter</a
+              >
+            </li>
+            <li>
+              Icons:
+              <a href="https://fontawesome.com" target="_blank"
+                >Font Awesome 6</a
+              >
+            </li>
+            <li>
+              Framework:
+              <a href="https://getbootstrap.com/" target="_blank"
+                >Bootstrap 5.3.2</a
+              >
+            </li>
+            <li>
+              Images: Used for demo purposes only (not included in final
+              download)
+            </li>
+          </ul>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" class="section-card fade-in">
+          <h2><i class="fas fa-question-circle"></i> FAQ</h2>
+          <h3>Q: Why are images not displaying?</h3>
+          <p>
+            A: Verify image paths in <code>assets/Assets/</code> and ensure
+            correct Bootstrap grid implementation.
+          </p>
+          <h3>Q: How do I add a new doctor profile?</h3>
+          <p>
+            A: Duplicate an existing Bootstrap card, updating the image, name,
+            specialty, and bio.
+          </p>
+          <h3>Q: How can I add a new blog post?</h3>
+          <p>
+            A: Create a new HTML file, link it in <code>blog.html</code>, and
+            use Bootstrap cards for styling.
+          </p>
+        </div>
+
+        <!-- Support -->
+        <div id="support" class="section-card fade-in">
+          <h2><i class="fas fa-life-ring"></i> Support Policy</h2>
+          <ul>
+            <li>6 months free support via ThemeForest after purchase</li>
+            <li>
+              Provide the specific page URL or filename when raising an issue
+            </li>
+            <li>Detail the issue or customization needed</li>
+            <li>Attach screenshots if applicable</li>
+            <li>Include browser and device information</li>
+          </ul>
+          <div class="note">
+            <i class="fas fa-info-circle"></i> Support does not cover
+            third-party plugins or major customizations.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2025 Hospital Website | Designed & Developed by
+      <a href="https://yourcompany.com">YourCompany</a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Animations and Navigation -->
+    <script>
+      // Sticky nav effect
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav.sticky-top");
+        if (window.scrollY > 50) {
+          nav.style.padding = "8px 0";
+          nav.style.boxShadow = "0 6px 20px rgba(0,0,0,0.15)";
+        } else {
+          nav.style.padding = "12px 0";
+          nav.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
+        }
+      });
+
+      // Fade-in animation on scroll
+      const sections = document.querySelectorAll(".fade-in");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      sections.forEach((section) => observer.observe(section));
+
+      // Active nav link highlighting
+      const navLinks = document.querySelectorAll(".nav-link");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        document.querySelectorAll(".section-card").forEach((section) => {
+          const sectionTop = section.offsetTop;
+          if (window.scrollY >= sectionTop - 100) {
+            current = section.getAttribute("id");
+          }
+        });
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
