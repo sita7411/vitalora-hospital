@@ -587,7 +587,7 @@ our care - section
   position: relative;
   border-radius: 40px 0 0 0;
   padding: 28px 20px 30px;
-  background: url("/Assets/Home-img/care-bg.jpg") no-repeat center/cover;
+  background: url("Assets/Home-img/care-bg.jpg") no-repeat center/cover;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
   z-index: 0;
